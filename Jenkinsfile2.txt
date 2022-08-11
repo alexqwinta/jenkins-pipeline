@@ -1,12 +1,12 @@
 pipeline {
-    agent { docker { image 'python:latest' } }
+    agent { docker { image 'node:16.13.1-alpine' }}
 
     stages {
         stage('1-Build') {
             steps {
                 echo "Start of Stage Build"
                 echo "Building......."
-                sh   "python --version"
+                sh   "node --version"
                 echo "End of Stage Build"
             }
         }
